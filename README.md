@@ -53,14 +53,16 @@
 
 
 ## Задание 2 
-###Реализовать запись в Google-таблицу набора данных, полученных с помощью линейной регрессии из лабораторной работы № 1
--Совместил программы из 1 и 2 лабораторных работ и изменил количество итераций для наглядности 
+### Реализовать запись в Google-таблицу набора данных, полученных с помощью линейной регрессии из лабораторной работы № 1
+-Совместил программы из 1 и 2 лабораторных работ и изменил количество итераций для наглядности
+
 ![image](https://user-images.githubusercontent.com/79518116/195156133-5775b3f7-b306-4deb-be56-1fbb1b42851b.png)
 ![image](https://user-images.githubusercontent.com/79518116/195156173-033329de-6e31-4d46-be92-da8195f6bd89.png)
 ![image](https://user-images.githubusercontent.com/79518116/195156207-a3c9001c-aff4-4cc9-89a5-064529335cff.png)
 ![image](https://user-images.githubusercontent.com/79518116/195156246-0b072ce3-98ae-4902-a038-374ce7a9cc02.png)
 
 -Данные записались в таблицу
+
 ![image](https://user-images.githubusercontent.com/79518116/195156288-7db0729b-6df4-4145-ae69-3f7278f91dbf.png)
 ![image](https://user-images.githubusercontent.com/79518116/195156328-e66a213e-cf44-48ff-9c17-f846e3f40a45.png)
 
