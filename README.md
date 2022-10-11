@@ -30,88 +30,52 @@
 - Выводы.
 
 ## Цель работы
-Ознакомиться с основными операторами зыка Python на примере реализации линейной регрессии.
+познакомиться с программными средствами для организции передачи данных между инструментами google, Python и Unity
 
 ## Задание 1
-### Hello World на Python и Unity
-![image](https://user-images.githubusercontent.com/79518116/192587228-34c4bfcf-5597-44b6-bc25-c150c77e48d9.png)
-![image](https://user-images.githubusercontent.com/79518116/192587486-dc00b672-1acc-4a1c-8137-3673dca26472.png)
-![image](https://user-images.githubusercontent.com/79518116/192587562-19c14e5f-bbfb-4426-8595-f54b1e30742e.png)
-![image](https://user-images.githubusercontent.com/79518116/192587675-44e4bbb4-0aab-4e56-97cd-1729567f5018.png)
+Реализовать совместную работу и передачу данных в связке Python
+- Google-Sheets – Unity. При выполнении задания используйте видео-материалы и исходные данные, предоставленные преподавателя курса.
+- В облачном сервисе google console подключить API для работы с google sheets и google drive.
+- Реализовать запись данных из скрипта на python в google-таблицу. Данные описывают изменение темпа инфляции на протяжении 11 отсчётных периодов, с
+учётом стоимости игрового объекта в каждый период.
+![image](https://user-images.githubusercontent.com/79518116/195153253-ea2d746f-9119-4aa8-b030-de52a06e149a.png)
+![image](https://user-images.githubusercontent.com/79518116/195153309-016735e0-ef9a-4230-af6e-4c9e7fd83876.png)
+![image](https://user-images.githubusercontent.com/79518116/195153374-e7e6d7c3-5183-4227-bc22-7f94bf58610c.png)
+
+- Создать новый проект на Unity, который будет получать данные из google-таблицы, в которую были записаны данные в предыдущем пункте.
+![image](https://user-images.githubusercontent.com/79518116/195153751-6b8f3550-8ee8-4bb4-87e5-cd63ad405c67.png)
+![image](https://user-images.githubusercontent.com/79518116/195153785-c1f44f3e-e14d-49bb-b1f5-54045844c3a9.png)
+
+- Написать функционал на Unity, в котором будет воспризводиться аудио-файл в зависимости от значения данных из таблицы.
+![image](https://user-images.githubusercontent.com/79518116/195154154-9952f2a3-4913-4f95-9fa4-15eec23a5183.png)
+В звыисимости от значения проигрываются разные аудиодорожки
 
 
+## Задание 2 
+###Реализовать запись в Google-таблицу набора данных, полученных с помощью линейной регрессии из лабораторной работы № 1
+-Совместил программы из 1 и 2 лабораторных работ и изменил количество итераций для наглядности 
+![image](https://user-images.githubusercontent.com/79518116/195156133-5775b3f7-b306-4deb-be56-1fbb1b42851b.png)
+![image](https://user-images.githubusercontent.com/79518116/195156173-033329de-6e31-4d46-be92-da8195f6bd89.png)
+![image](https://user-images.githubusercontent.com/79518116/195156207-a3c9001c-aff4-4cc9-89a5-064529335cff.png)
+![image](https://user-images.githubusercontent.com/79518116/195156246-0b072ce3-98ae-4902-a038-374ce7a9cc02.png)
 
-## Задание 2
-### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
-Ход работы:
-- Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
-2.1
-
-```py
-
-In [ ]:
-#Import the required modules, numpy for calculation, and Matplotlib for drawing
-import numpy as np
-import matplotlib.pyplot as plt
-#This code is for jupyter Notebook only
-%matplotlib inline
-
-# define data, and change list to array
-x = [3,21,22,34,54,34,55,67,89,99]
-x = np.array(x)
-y = [2,22,24,65,79,82,55,130,150,199]
-y = np.array(y)
-
-#Show the effect of a scatter plot
-plt.scatter(x,y)
-
-```
-![image](https://user-images.githubusercontent.com/79518116/192839375-bdeb99ab-5c41-42ad-b9df-f5971cd9d810.png)
-
-2.2
-- Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
-
-![image](https://user-images.githubusercontent.com/79518116/192843057-397f4279-bc3f-4117-9a40-6e3f71aca199.png)
-
-2.3
--Начать итерацию
-![image](https://user-images.githubusercontent.com/79518116/192843923-4921f27a-2f4d-4e5d-9101-302f6858a006.png)
-
-![image](https://user-images.githubusercontent.com/79518116/192844308-49806504-f543-41de-a400-1622d7411f5d.png)
-
-![image](https://user-images.githubusercontent.com/79518116/192844464-15778c68-1320-4070-94cb-7fcbb1834f5c.png)
-
-![image](https://user-images.githubusercontent.com/79518116/192844581-bb2898b8-4753-41a9-9dbb-801054e2c662.png)
-
-![image](https://user-images.githubusercontent.com/79518116/192844703-8fc00bea-2280-4207-8aef-22e1893d8a43.png)
-
-![image](https://user-images.githubusercontent.com/79518116/192844793-193a3579-0255-4b1c-bbb1-af25bda0362b.png)
+-Данные записались в таблицу
+![image](https://user-images.githubusercontent.com/79518116/195156288-7db0729b-6df4-4145-ae69-3f7278f91dbf.png)
+![image](https://user-images.githubusercontent.com/79518116/195156328-e66a213e-cf44-48ff-9c17-f846e3f40a45.png)
 
 
 ## Задание 3
-### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
-
--loss это разница между предсказаным значением и настоящим, при увеличении количества итераций loss становится меньше тк настоящее и предсказаное значение становятся ближе друг к другу, следовательно при бесконечном количестве итераций loss будет стремиться к 0
-![image](https://user-images.githubusercontent.com/79518116/192847802-f52ba610-0ffb-4ded-80f7-b0b1e527af80.png)
-
-![image](https://user-images.githubusercontent.com/79518116/192847872-d2410832-f182-4ba3-93e7-1fa18a88347c.png)
-
-
-
-## Задание 4
-### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
-
-- lr точность с которой высчитывается функция, чем меньше значение lr тем ближе предсказанное значение  к настоящему, но тем больше итераций необходимо для вычисления точного значения
-(меняется loss)
-
-![image](https://user-images.githubusercontent.com/79518116/192849263-8382fef0-8331-49a5-8883-7bed4f181155.png)
-
-![image](https://user-images.githubusercontent.com/79518116/192849589-20449eb4-4e9d-48ac-b812-952042839351.png)
+### Самостоятельно разработать сценарий воспроизведения звукового сопровождения в Unity в зависимости от изменения считанных данных в задании 2
+-Потребовалось переписать скрипт из юнити чтобы в зависимости от величины Loss менялась звуковая дорожка
+![image](https://user-images.githubusercontent.com/79518116/195157396-df00b804-c368-4cbd-9d30-b8edbd9696e7.png)
+![image](https://user-images.githubusercontent.com/79518116/195157452-f8cd23c7-a6b6-44f0-8cbe-9ea39db74a33.png)
+- >2000 - плохо ,>1000 но <2000 - нормально, <1000 - хорошо
+![image](https://user-images.githubusercontent.com/79518116/195158093-14492de2-5531-4ce5-8742-64c7d82f6480.png)
 
 
 ## Выводы
 
-- В ходе лабораторной работы мы научились писать Hello World на питоне и в юнити, изучили алгоритм линейной регрессии, узнали зачем в алгоритме параметр lr и может ли loss стремиться к 0
+- В ходе лабораторной работы мы научились загружать в таблицу данные с помощью Python и выгружать их и использовать с помощью C# и Unity
 
 ## Powered by
 
